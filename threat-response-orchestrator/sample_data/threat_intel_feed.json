@@ -1,0 +1,94 @@
+[
+  {
+    "indicator_type": "ip",
+    "value": "185.220.101.47",
+    "confidence": 0.93,
+    "source_feed": "AlienVault OTX",
+    "tags": [
+      "tor-exit-node",
+      "c2-infrastructure"
+    ],
+    "mitre_techniques": [
+      "T1071.001",
+      "T1041"
+    ]
+  },
+  {
+    "indicator_type": "ip",
+    "value": "198.51.100.23",
+    "confidence": 0.81,
+    "source_feed": "AlienVault OTX",
+    "tags": [
+      "brute-force-source",
+      "known-scanner"
+    ],
+    "mitre_techniques": [
+      "T1110"
+    ]
+  },
+  {
+    "indicator_type": "domain",
+    "value": "accounts-secure-billing.com",
+    "confidence": 0.88,
+    "source_feed": "PhishTank",
+    "tags": [
+      "phishing",
+      "typosquat"
+    ],
+    "mitre_techniques": [
+      "T1566.001",
+      "T1566.002"
+    ]
+  },
+  {
+    "indicator_type": "domain",
+    "value": "n7x2q.duckdns.org",
+    "confidence": 0.76,
+    "source_feed": "AlienVault OTX",
+    "tags": [
+      "dns-tunneling",
+      "dynamic-dns"
+    ],
+    "mitre_techniques": [
+      "T1071.004"
+    ]
+  },
+  {
+    "indicator_type": "hash_sha256",
+    "value": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b85",
+    "confidence": 0.95,
+    "source_feed": "VirusTotal",
+    "tags": [
+      "lockbit3",
+      "ransomware"
+    ],
+    "mitre_techniques": [
+      "T1486",
+      "T1490"
+    ]
+  },
+  {
+    "indicator_type": "hash_sha256",
+    "value": "a94a8fe5ccb19ba61c4c0873d391e987982fbbd3a94a8fe5ccb19ba61c4c087",
+    "confidence": 0.7,
+    "source_feed": "MISP",
+    "tags": [
+      "credential-dumping-tool"
+    ],
+    "mitre_techniques": [
+      "T1003"
+    ]
+  },
+  {
+    "indicator_type": "url",
+    "value": "https://accounts-secure-billing.com/invoice/verify",
+    "confidence": 0.87,
+    "source_feed": "PhishTank",
+    "tags": [
+      "phishing-landing-page"
+    ],
+    "mitre_techniques": [
+      "T1566.002"
+    ]
+  }
+]

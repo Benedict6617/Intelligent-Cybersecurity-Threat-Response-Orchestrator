@@ -1,0 +1,22 @@
+name: brute_force_lockout
+description: >
+  Responds to credential brute-force / password spraying by blocking
+  the offending source IP and forcing a credential reset if any
+  authentication ultimately succeeded.
+trigger:
+  mitre_techniques:
+    - T1110
+    - T1110.003
+  min_severity: medium
+steps:
+  - name: Block source IP at perimeter firewall
+    action: firewall.block_ip
+    params:
+      indicators: []
+  - name: Force password reset on targeted account(s)
+    action: identity.force_password_reset
+    params: {}
+  - name: Create ticket for SOC L1 review
+    action: itsm.create_ticket
+    params:
+      priority: P3

@@ -1,0 +1,22 @@
+name: phishing_response
+description: >
+  Responds to a confirmed spearphishing incident: forces a password
+  reset on the targeted account, revokes active sessions, and blocks
+  the malicious sender/URL indicators.
+trigger:
+  mitre_techniques:
+    - T1566.001
+    - T1566.002
+  min_severity: medium
+steps:
+  - name: Force password reset on targeted account
+    action: identity.force_password_reset
+    params: {}
+  - name: Block malicious URL/domain indicators
+    action: firewall.block_ip
+    params:
+      indicators: []
+  - name: Create ticket for user security awareness follow-up
+    action: itsm.create_ticket
+    params:
+      priority: P3

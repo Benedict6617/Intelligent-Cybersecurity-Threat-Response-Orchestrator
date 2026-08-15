@@ -1,0 +1,152 @@
+[
+  {
+    "source": "cloud",
+    "source_product": "AWS CloudTrail",
+    "event_type": "cloud_iam_policy_change_suspicious",
+    "severity": "high",
+    "user": "jmartinez",
+    "source_ip": "185.220.101.47",
+    "description": "IAM policy 'finance-readonly' modified to attach AdministratorAccess to role 'finance-automation-role'.",
+    "occurred_at": "2026-08-12T09:50:00+00:00"
+  },
+  {
+    "source": "cloud",
+    "source_product": "AWS CloudTrail",
+    "event_type": "cloud_storage_bulk_upload",
+    "severity": "medium",
+    "user": "jmartinez",
+    "source_ip": "185.220.101.47",
+    "description": "47 objects (2.1 GB total) uploaded to newly-created, publicly-writable S3 bucket 'backup-sync-temp-88213'.",
+    "occurred_at": "2026-08-12T09:55:00+00:00"
+  },
+  {
+    "source": "cloud",
+    "source_product": "AWS CloudTrail",
+    "event_type": "cloud_anomalous_compute_spike",
+    "severity": "low",
+    "user": "svc_ci_pipeline",
+    "source_ip": "10.20.9.4",
+    "description": "EC2 fleet scaled from 4 to 40 instances outside of normal deployment window; consistent with cryptomining or load-testing.",
+    "occurred_at": "2026-08-12T14:00:00+00:00"
+  },
+  {
+    "source": "cloud",
+    "source_product": "AWS CloudTrail",
+    "event_type": "cloud_api_call",
+    "severity": "info",
+    "user": "tlefevre",
+    "source_ip": "10.20.2.235",
+    "description": "Routine read-only S3/EC2 describe API call via approved CI/CD role.",
+    "occurred_at": "2026-08-12T04:50:00+00:00"
+  },
+  {
+    "source": "cloud",
+    "source_product": "AWS CloudTrail",
+    "event_type": "cloud_api_call",
+    "severity": "info",
+    "user": "tlefevre",
+    "source_ip": "10.20.5.50",
+    "description": "Routine read-only S3/EC2 describe API call via approved CI/CD role.",
+    "occurred_at": "2026-08-12T08:08:00+00:00"
+  },
+  {
+    "source": "cloud",
+    "source_product": "AWS CloudTrail",
+    "event_type": "cloud_api_call",
+    "severity": "info",
+    "user": "dnguyen",
+    "source_ip": "10.20.5.166",
+    "description": "Routine read-only S3/EC2 describe API call via approved CI/CD role.",
+    "occurred_at": "2026-08-12T14:26:00+00:00"
+  },
+  {
+    "source": "cloud",
+    "source_product": "AWS CloudTrail",
+    "event_type": "cloud_api_call",
+    "severity": "info",
+    "user": "bpatel",
+    "source_ip": "10.20.1.180",
+    "description": "Routine read-only S3/EC2 describe API call via approved CI/CD role.",
+    "occurred_at": "2026-08-12T14:36:00+00:00"
+  },
+  {
+    "source": "cloud",
+    "source_product": "AWS CloudTrail",
+    "event_type": "cloud_api_call",
+    "severity": "info",
+    "user": "dnguyen",
+    "source_ip": "10.20.5.248",
+    "description": "Routine read-only S3/EC2 describe API call via approved CI/CD role.",
+    "occurred_at": "2026-08-12T11:59:00+00:00"
+  },
+  {
+    "source": "cloud",
+    "source_product": "AWS CloudTrail",
+    "event_type": "cloud_api_call",
+    "severity": "info",
+    "user": "kwilson",
+    "source_ip": "10.20.3.77",
+    "description": "Routine read-only S3/EC2 describe API call via approved CI/CD role.",
+    "occurred_at": "2026-08-12T02:38:00+00:00"
+  },
+  {
+    "source": "cloud",
+    "source_product": "AWS CloudTrail",
+    "event_type": "cloud_api_call",
+    "severity": "info",
+    "user": "kwilson",
+    "source_ip": "10.20.3.79",
+    "description": "Routine read-only S3/EC2 describe API call via approved CI/CD role.",
+    "occurred_at": "2026-08-12T05:28:00+00:00"
+  },
+  {
+    "source": "cloud",
+    "source_product": "AWS CloudTrail",
+    "event_type": "cloud_api_call",
+    "severity": "info",
+    "user": "dnguyen",
+    "source_ip": "10.20.4.193",
+    "description": "Routine read-only S3/EC2 describe API call via approved CI/CD role.",
+    "occurred_at": "2026-08-12T06:31:00+00:00"
+  },
+  {
+    "source": "cloud",
+    "source_product": "AWS CloudTrail",
+    "event_type": "cloud_api_call",
+    "severity": "info",
+    "user": "arahman",
+    "source_ip": "10.20.5.139",
+    "description": "Routine read-only S3/EC2 describe API call via approved CI/CD role.",
+    "occurred_at": "2026-08-12T09:00:00+00:00"
+  },
+  {
+    "source": "cloud",
+    "source_product": "AWS CloudTrail",
+    "event_type": "cloud_api_call",
+    "severity": "info",
+    "user": "tlefevre",
+    "source_ip": "10.20.1.33",
+    "description": "Routine read-only S3/EC2 describe API call via approved CI/CD role.",
+    "occurred_at": "2026-08-12T11:29:00+00:00"
+  },
+  {
+    "source": "cloud",
+    "source_product": "AWS CloudTrail",
+    "event_type": "cloud_api_call",
+    "severity": "info",
+    "user": "svc_monitoring",
+    "source_ip": "10.20.5.21",
+    "description": "Routine read-only S3/EC2 describe API call via approved CI/CD role.",
+    "occurred_at": "2026-08-12T00:43:00+00:00"
+  },
+  {
+    "source": "cloud",
+    "source_product": "AWS CloudTrail",
+    "event_type": "cloud_api_call",
+    "severity": "info",
+    "user": "tlefevre",
+    "source_ip": "10.20.3.173",
+    "description": "Routine read-only S3/EC2 describe API call via approved CI/CD role.",
+    "occurred_at": "2026-08-12T05:08:00+00:00"
+  }
+]

@@ -1,0 +1,41 @@
+# Reference deployment for local evaluation and small-business production use.
+# For real production, put this behind a reverse proxy (Caddy/Nginx) with TLS,
+# point DATABASE_URL at a managed PostgreSQL instance, and run the API with
+# multiple uvicorn/gunicorn workers.
+
+services:
+  api:
+    build: .
+    container_name: threat-orchestrator-api
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./sample_data:/app/sample_data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/healthz')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  # Optional: PostgreSQL for production-scale deployments.
+  # Uncomment and set DATABASE_URL in .env to
+  # postgresql+psycopg2://orchestrator:orchestrator@db:5432/orchestrator
+  #
+  # db:
+  #   image: postgres:16-alpine
+  #   container_name: threat-orchestrator-db
+  #   environment:
+  #     POSTGRES_USER: orchestrator
+  #     POSTGRES_PASSWORD: orchestrator
+  #     POSTGRES_DB: orchestrator
+  #   volumes:
+  #     - pgdata:/var/lib/postgresql/data
+  #   ports:
+  #     - "5432:5432"
+
+# volumes:
+#   pgdata:

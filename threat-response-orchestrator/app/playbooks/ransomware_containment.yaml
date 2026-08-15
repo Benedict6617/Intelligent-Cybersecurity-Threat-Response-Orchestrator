@@ -1,0 +1,34 @@
+name: ransomware_containment
+description: >
+  Contains suspected ransomware activity by isolating affected hosts,
+  blocking known-bad C2 indicators, and forcing an immediate escalation
+  to the IR lead and CISO. Destructive account actions require analyst
+  approval.
+trigger:
+  mitre_techniques:
+    - T1486   # Data Encrypted for Impact
+    - T1490   # Inhibit System Recovery
+  min_severity: high
+steps:
+  - name: Isolate affected host from network
+    action: edr.isolate_host
+    params: {}
+  - name: Collect forensic snapshot before further action
+    action: edr.collect_forensic_snapshot
+    params: {}
+  - name: Block known C2 indicators at perimeter firewall
+    action: firewall.block_ip
+    params:
+      indicators: []   # populated at runtime from matched threat intel
+  - name: Disable compromised account
+    action: identity.disable_account
+    params: {}
+    requires_approval: true
+  - name: Create P1 ITSM ticket
+    action: itsm.create_ticket
+    params:
+      priority: P1
+  - name: Escalate to IR lead and CISO
+    action: notify.escalate
+    params:
+      notify: ["ir-lead@example-corp.local", "ciso@example-corp.local"]

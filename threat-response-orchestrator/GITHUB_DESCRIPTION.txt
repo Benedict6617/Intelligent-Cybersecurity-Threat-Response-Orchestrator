@@ -1,0 +1,43 @@
+# Suggested text for uploading this repo to GitHub
+
+Use this when creating the repository on your account — paste the
+description into the "Description" field, and add the suggested topics
+so the repo is discoverable. Edit freely to match your voice.
+
+## Repository name
+Intelligent-Cybersecurity-Threat-Response-Orchestrator
+
+(or: threat-response-orchestrator — GitHub repo names can't contain spaces)
+
+## Short description (GitHub "About" field, ~1 line)
+A self-hostable SOAR platform for small security teams: MITRE ATT&CK-based
+threat correlation, automated containment playbooks, ITSM ticketing, and
+SOC 2/ISO 27001 compliance reporting.
+
+## Longer description (for a pinned repo, portfolio site, or LinkedIn post)
+Built a SOAR (Security Orchestration, Automation and Response) platform
+designed for small businesses that can't justify enterprise SOAR licensing
+but still face real incident-response demands. It ingests telemetry from
+SIEM, EDR, firewall, and cloud sources, correlates related events into
+incidents using the MITRE ATT&CK framework with an explainable confidence
+score, suppresses false positives, runs automated containment playbooks
+(with human-approval gates on destructive actions), coordinates ITSM
+ticket creation, manages a configurable incident escalation matrix with
+SLA tracking, reconstructs forensic timelines, and generates SOC 2 / ISO
+27001 audit evidence — all as a single self-hostable FastAPI service with
+no proprietary automation DSL or vendor lock-in.
+
+Stack: Python, FastAPI, SQLAlchemy, scikit-learn (IsolationForest anomaly
+detection), YAML-defined playbooks, Docker.
+
+## Suggested topics/tags
+soar, cybersecurity, incident-response, mitre-attack, threat-detection,
+security-automation, fastapi, python, soc2, iso27001, blue-team,
+security-orchestration, threat-intelligence, siem, edr
+
+## Notes for you before publishing
+- Update the copyright line in `LICENSE` with your name/organization.
+- Review `.env.example` and confirm no real credentials are committed
+  anywhere (there shouldn't be — everything is a placeholder).
+- The bundled `sample_data/` uses fictional company/user/host names
+  ("Example Corp", "jmartinez", "FIN-WKS-014", etc.) — safe to publish.

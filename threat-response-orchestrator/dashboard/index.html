@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SOC Console — Threat Response Orchestrator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="mark"></span>
+      <h1>Threat Response Orchestrator</h1>
+      <span class="env" id="env-badge">development</span>
+    </div>
+    <div class="statusline" id="status-line">connecting…</div>
+  </header>
+
+  <main>
+    <section class="metrics" id="metrics">
+      <div class="metric-card"><div class="label">Open incidents</div><div class="value" id="m-open">–</div></div>
+      <div class="metric-card critical"><div class="label">Critical open</div><div class="value" id="m-critical">–</div></div>
+      <div class="metric-card"><div class="label">Events (24h)</div><div class="value" id="m-events">–</div></div>
+      <div class="metric-card"><div class="label">False positives suppressed (24h)</div><div class="value" id="m-fp">–</div></div>
+    </section>
+
+    <section class="grid-2">
+      <div class="panel">
+        <div class="panel-header">
+          <span>Active incidents</span>
+          <button class="refresh-btn" id="refresh-btn">refresh</button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Severity</th>
+              <th>Incident</th>
+              <th>MITRE techniques</th>
+              <th>Confidence</th>
+              <th>Status</th>
+              <th>Created</th>
+            </tr>
+          </thead>
+          <tbody id="incident-rows">
+            <tr><td colspan="6" class="empty-state">Loading incidents…</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header"><span>Top ATT&amp;CK techniques observed</span></div>
+        <div class="technique-list" id="technique-list">
+          <span class="empty-state">Loading…</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer-note">
+      SOC Console reference UI · pulls from <span id="api-base-label"></span> · this is a demo/reference dashboard —
+      wire in your organization's SSO before exposing outside a trusted network.
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
